@@ -1,0 +1,55 @@
+<!-- THIS DOCUMENT REPRESENTS THE BASIC STRUCTURE OF A DROPDOWN MENU, AND IS DESIGNED FOR THE USER TO TAKE CONTENTS FROM IT AND THEN ADD
+THE CORRESPONDING HTML OR CSS ACCORDING TO THE PROJECT THEY'RE DEVELOPING -->
+
+<!-- FOR AN IN DEPTH EXPLANATION, VISIT THE DROPDOWN LINK -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dropdown-menu {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-button {
+      width: 160px;
+      height: 40px;
+      background-color: grey;
+      color: white;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+    .dropdown-content {
+      width: 100%;
+      overflow: auto;
+      display: none;
+      position: absolute;
+    }
+    .dropdown-menu:hover .dropdown-content {
+      display: block;
+    }
+    a:hover {
+      background-color: rgb(171, 171, 171);
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown-menu">
+    <button class="dropdown-button">Dropdown Content</button>
+  <div class="dropdown-content">
+    <ul>
+      <li><a href="dropdown.html">dropdown</a></li>
+      <li><a href="something-else.html">something else</a></li>
+    </ul>
+  </div>
+  </div>
+</body>
+</html>

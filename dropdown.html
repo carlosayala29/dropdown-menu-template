@@ -1,0 +1,45 @@
+<!-- THIS DOCUMENT REPRESENTS THE BASIC STRUCTURE OF A DROPDOWN MENU, AND IS DESIGNED FOR THE USER TO TAKE CONTENTS FROM IT AND THEN ADD
+THE CORRESPONDING HTML OR CSS ACCORDING TO THE PROJECT THEY'RE DEVELOPING -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*The basic CSS for a dropdown menu is: first make sure the content of the menu is removed from the HTML, use display: none. 
+        Then you want to make sure when the user hovers whatever you want the user to hover, for the content of the menu to appear. 
+        To make that happen: container:hover .content {display: bock}  What you're telling the machine is: every time the user hovers over 
+        container, then make the content do whatever is on the {}. In this case I have also added the CSS necessary for the img to 
+        dissapear every time the content of the menu appears*/
+        .content-container {
+            display: none;
+        }
+        .menu-container:hover .content-container{
+            display: block;
+        }
+        .menu-container:hover img{
+            display: none;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--The basic HTML for a dropdown menu is: first create a container (div) tha holds all the dropdown menu, this is the the item that
+    whenever someone hovers over it, the menu contents show up. Next you want the basic element you want the user to hover, it doesn't matter 
+    what it is (button, h#, p, span, img...). Finally, create another div inside the div, this new div holds the contents of the menu and
+    is what's going to show up when the user hovers over the HTML item. In this case I've added anchor tags but it could be a li or something
+    else-->
+    <div class="menu-container">
+        <img src="bars-solid.svg" alt="">
+        <div class="content-container">
+            <a href="index.html">index</a><br>
+            <a href="something-else.html">something-else</a>
+        </div>
+    </div>
+</body>
+</html>
